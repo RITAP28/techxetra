@@ -2,6 +2,8 @@
 import { useGSAP } from "@gsap/react";
 import { useNavigate } from "react-router-dom";
 import { StarsBackground } from "../../components/starsBackground";
+import {ShootingStars} from '../../components/shootingStars'
+import RotatingPlanet from "../../components/Planet"
 import gsap from "gsap";
 import { useRef } from "react";
 
@@ -38,34 +40,38 @@ const Hero = () => {
   }, [starsBg])
 
   return (
-    <div className="w-full h-full">
-      <div ref={starsBg} className="w-full mx-auto h-screen overflow-hidden">
+    <div className="flex justify-center items-center ">
+      <div ref={starsBg} className="w-full  h-[150vh] overflow-hidden flex flex-col items-center">
         <StarsBackground
-          starDensity={0.0003}
+          starDensity={0.0004}
           allStarsTwinkle
-          twinkleProbability={0.9}
+          twinkleProbability={1}
           minTwinkleSpeed={0.6}
           maxTwinkleSpeed={1.2}
           className="absolute"
         />
-        {/* <ShootingStars /> */}
-        <div className="w-full h-[5rem] flex flex-row justify-between text-white">
-          <div className="pl-4 pt-4">
-            <p ref={logo}>TechXetra</p>
+        <ShootingStars/>
+        <div className="w-full h-[5rem] flex justify-between  text-white">
+          <div className="pl-20 mt-12">
+            <img src="./final text-Photoroom.png" width={200} alt="" />
           </div>
-          <div className="pr-4 pt-4">
+
+          <div className="pr-14 pt-12">
             <button
               ref={btnRef}
               type="button"
-              className="hover:cursor-pointer"
               onClick={() => {
                 navigate("/login");
               }}
             >
-              Login
+              <h1 className="font-originTech text-4xl pt-9 pr-10 bg-gradient-to-t from-[#84165e] via-[#ad9481]  to-[#A98164] bg-clip-text text-transparent">Login</h1>
             </button>
           </div>
         </div>
+        <div className="mt-44 mb-14 text-6xl font-autoTechno">
+          <h1 className="bg-gradient-to-r from-[#5162ce] via-[#E12198]/[77%] to-[#F3AC80] bg-clip-text text-transparent text-center leading-[100px]">REVIVING THE LEGACY <br /><span className="text-5xl">INSPIRING INNOVATION</span> </h1>
+        </div>
+        <RotatingPlanet/>
       </div>
     </div>
   );

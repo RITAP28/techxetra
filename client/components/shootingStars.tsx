@@ -43,12 +43,12 @@ const getRandomStartPoint = () => {
 };
 export const ShootingStars: React.FC<ShootingStarsProps> = ({
   minSpeed = 10,
-  maxSpeed = 30,
-  minDelay = 1200,
+  maxSpeed = 20,
+  minDelay = 1000,
   maxDelay = 4200,
-  starColor = "#9E00FF",
+  starColor = "#ffffff",
   trailColor = "#2EB9DF",
-  starWidth = 10,
+  starWidth = 30,
   starHeight = 1,
   className,
 }) => {
@@ -64,13 +64,14 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
         y,
         angle,
         scale: 1,
-        speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
-        distance: 0,
+        // speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
+        speed:10,
+        distance: 10,
       };
       setStar(newStar);
 
-      const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
-      setTimeout(createStar, randomDelay);
+      // const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+      setTimeout(createStar, minDelay);
     };
 
     createStar();
@@ -117,7 +118,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
   return (
     <svg
       ref={svgRef}
-      className={cn("w-full h-full absolute inset-0", className)}
+      className={cn("w-full h-full absolute  inset-0", className)}
     >
       {star && (
         <rect
