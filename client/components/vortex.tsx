@@ -4,7 +4,8 @@ import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion";
 
 interface VortexProps {
-  children?: never;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children?: any;
   className?: string;
   containerClassName?: string;
   particleCount?: number;
