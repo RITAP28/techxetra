@@ -33,7 +33,7 @@ const Login = () => {
           twinkleProbability={0.9}
           minTwinkleSpeed={0.6}
           maxTwinkleSpeed={1.2}
-          className="absolute"
+          className="absolute bg-gradient-to-b from-[#000000] via-[#220135] to-[#020b22]"
         />
         <div ref={formDiv} className="w-full h-full flex justify-center items-center">
           <form

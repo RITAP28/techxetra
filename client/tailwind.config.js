@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        originTech:['originTech'],
+        techno:['techno'],
+        autoTechno:['autoTechno'],
+        lemonMilk:['lemonMilk']
+      },
+    },
   },
   plugins: [],
 }
