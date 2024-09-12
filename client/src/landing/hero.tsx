@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { useNavigate } from "react-router-dom";
 import { StarsBackground } from "../../components/starsBackground";
 import {ShootingStars} from '../../components/shootingStars'
+import RotatingPlanet from "../../components/Planet"
 import gsap from "gsap";
 import { useRef } from "react";
 
@@ -40,7 +41,7 @@ const Hero = () => {
 
   return (
     <div className="flex justify-center items-center ">
-      <div ref={starsBg} className="w-full  h-[120vh] overflow-hidden flex flex-col items-center">
+      <div ref={starsBg} className="w-full  h-[150vh] overflow-hidden flex flex-col items-center">
         <StarsBackground
           starDensity={0.0004}
           allStarsTwinkle
@@ -63,14 +64,14 @@ const Hero = () => {
                 navigate("/login");
               }}
             >
-              <h1 className="font-originTech text-3xl pt-9 pr-10">Login</h1>
+              <h1 className="font-originTech text-4xl pt-9 pr-10 bg-gradient-to-t from-[#84165e] via-[#ad9481]  to-[#A98164] bg-clip-text text-transparent">Login</h1>
             </button>
           </div>
         </div>
-        <div className="mt-44 text-6xl font-autoTechno">
-          <h1 className="bg-gradient-to-r from-[#FFFFFF] via-[#E12198]/[77%] to-[#FFFFFF] bg-clip-text text-transparent text-center leading-[100px]">REVIVING THE LEGACY <br /><span className="text-5xl">INSPIRING INNOVATION</span> </h1>
+        <div className="mt-44 mb-14 text-6xl font-autoTechno">
+          <h1 className="bg-gradient-to-r from-[#5162ce] via-[#E12198]/[77%] to-[#F3AC80] bg-clip-text text-transparent text-center leading-[100px]">REVIVING THE LEGACY <br /><span className="text-5xl">INSPIRING INNOVATION</span> </h1>
         </div>
-        <img src="./planet.png" width={800}  alt="" className="mt-[400px] absolute"/>
+        <RotatingPlanet/>
       </div>
     </div>
   );

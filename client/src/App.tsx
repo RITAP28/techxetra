@@ -3,7 +3,6 @@ import './App.css'
 import Landing from './pages/landing'
 import Login from './pages/login'
 import About from './pages/About'
-
 function App() {
   return (
     <>
@@ -12,6 +11,7 @@ function App() {
       <Route path='/login' element={<Login />} />
     </Routes>
       <About/>
+    
     </>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import { StarsBackground } from '../../components/starsBackground';
 const About: React.FC = () => {
   return (
-    <div className='bg-gradient-to-b from-[#020b22] to-[#271938]'>
-      <h1 className='text-white pt-40 text-4xl pl-20'>About Us</h1>
+    <div className='bg-gradient-to-b from-[#020b22] to-[#271938] '>
+      <h1 className='text-white  text-4xl pl-20'>About Us</h1>
       <StarsBackground/>
     </div>
   );
