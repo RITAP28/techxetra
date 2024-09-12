@@ -40,7 +40,7 @@ const Hero = () => {
 
   return (
     <div className="flex justify-center items-center ">
-      <div ref={starsBg} className="w-full  h-[200vh] overflow-hidden flex flex-col items-center">
+      <div ref={starsBg} className="w-full  h-[120vh] overflow-hidden flex flex-col items-center">
         <StarsBackground
           starDensity={0.0004}
           allStarsTwinkle
